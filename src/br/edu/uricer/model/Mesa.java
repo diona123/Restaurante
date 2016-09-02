@@ -5,16 +5,21 @@ import java.util.List;
 
 
 public class Mesa {
+    private int numero;
     private boolean ocupado;
     private List<Item> itens;
     private BigDecimal valorTotal;
 
-    Mesa(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Mesa(int numero) {
+        this.numero = numero;
     }
 
-    Mesa(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
     
     public boolean isOcupado() {
