@@ -1,13 +1,14 @@
 package br.edu.uricer.model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Mesa {
     private int numero;
     private boolean ocupado;
-    private List<Item> itens;
+    private List<Item> itens = new ArrayList<>();
     private BigDecimal valorTotal;
 
     public Mesa(int numero) {
@@ -40,14 +41,16 @@ public class Mesa {
         ocupado = false;        
     }
       public void totalizar(){
-        BigDecimal valorTotal = new BigDecimal ("0.0");
+        valorTotal = new BigDecimal ("0.0");
         for (Item item:itens){
             item.totalizar();
             valorTotal = valorTotal.add(item.getValorTotal());
            
         }
     }
-    public void adicionar(){
+    public void adicionarItem(Produto produto, BigDecimal quantidade, BigDecimal valorUnitario){
+        Item novoItem = new Item();
+        novoItem.setProduto(produto);
                 
     }
     
